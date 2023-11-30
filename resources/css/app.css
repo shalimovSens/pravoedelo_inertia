@@ -1,0 +1,118 @@
+@font-face  {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Medium.woff2');
+    font-weight: 500;
+    font-style: normal;
+    display: swap;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+    display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+*::after, *::before {
+    position: absolute;
+}
+
+:where(ul, ol):where([class]) {
+    list-style: none;
+    padding-left: 0;
+}
+
+body, figure[class], blockquote[class] {
+    margin: 0;
+}
+
+:where(a[class]) {
+    text-decoration: none;
+    color: inherit;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6):where([class]) {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, select, button {
+    font: inherit;
+    /* border: none; */
+    outline: none;
+    color: inherit;
+}
+
+:where(textarea):where([class]) {
+    padding: 0;
+}
+
+:where(button):where([class]) {
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.2;
+    /* color: $black */
+    /* background-color: $white */
+    /* font-size: $font-size-s */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+#app {
+    min-height: 100dvh;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* .main {
+    flex: 1 1 auto;
+} */
